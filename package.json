@@ -2,6 +2,9 @@
   "name": "rcs-stock-app",
   "version": "0.1.0",
   "private": true,
+  "devDependencies": {
+    "react-error-overlay": "6.0.9"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
@@ -29,8 +32,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "REACT_APP_AUTH_SERVICE_URL=\"http://localhost:8082\" REACT_APP_STOCK_SERVICE_URL=\"http://localhost:8080\" react-scripts start",
+    "build": "REACT_APP_AUTH_SERVICE_URL=\"http://localhost:8082\" REACT_APP_STOCK_SERVICE_URL=\"http://localhost:8080\" react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

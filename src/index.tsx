@@ -9,8 +9,8 @@ import rootReducer from './store/reducers';
 import StockAppManager from './store/StoreManager';
 
 const servicesConfig = {
-  authServiceUrl: "http://localhost:8082", //process.env.REACT_APP_AUTH_SERVICE_URL,
-  stockServiceUrl: "http://localhost:8080" //process.env.REACT_APP_STOCK_SERVICE_URL
+  authServiceUrl: process.env.REACT_APP_AUTH_SERVICE_URL,
+  stockServiceUrl: process.env.REACT_APP_STOCK_SERVICE_URL
 };
 
 const store = createStore(rootReducer);
