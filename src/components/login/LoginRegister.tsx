@@ -17,7 +17,7 @@ export default function LoginRegister(props: Props) {
 
   const [ loginError, setLoginError ] = useState<boolean>(undefined);
   const [ registerError, setRegisterError ] = useState<string>(undefined);
-  const [ registerSuccess, setRegisterSuccess ] = useState<boolean>(undefined);
+  const [ registerSuccess, setRegisterSuccess ] = useState<string>(undefined);
 
   useEffect(() => {
     async function fetchAndSetMyStocks() {
@@ -42,10 +42,10 @@ export default function LoginRegister(props: Props) {
       authService.register(username, password)
         .then(response => {
           if (response.ok) {
-            setRegisterSuccess(true);
+            setRegisterSuccess(`Welcome, ${username}. You may now login with your credentials`);
             setRegisterError(undefined);
           } else {
-            setRegisterSuccess(false);
+            setRegisterSuccess(undefined);
             switch(response.status) {
               case 409: setRegisterError('A user with that username already exists'); break;
               default: setRegisterError('Failed to register');
@@ -71,7 +71,7 @@ export default function LoginRegister(props: Props) {
           title="Not yet a user?"
           submitLabel="Register" 
           error={registerError}
-          success={registerSuccess && 'You may now log in with your credentials'}
+          success={registerSuccess}
           onSubmit={handleRegister}/>
       </div>
     </div>

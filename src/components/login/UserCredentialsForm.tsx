@@ -16,6 +16,8 @@ export default function Login(props: Props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     props.onSubmit(username, password);
+    setUsername('');
+    setPassword('');
   }
 
   return <div className="user-credentials-form flex-column">
@@ -46,13 +48,13 @@ export default function Login(props: Props) {
       </form>
       {
         props.error &&
-        <div className="alert-message error">
+        <div className="message-error">
           { props.error }
         </div>
       }
       {
         props.success &&
-        <div className="alert-message success">
+        <div className="message-success">
           { props.success }
         </div>
       }

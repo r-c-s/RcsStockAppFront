@@ -52,21 +52,18 @@
       form {
         max-width: 300px;
         margin-bottom: 20px;
+        margin-right: 10px;
 
         input {
           margin-bottom: 5px;
         }
       }
 
-      .alert-message {
-        margin-left: 10px;
-      }
-
-      .error {
+      .message-error {
         color: red;
       }
 
-      .success {
+      .message-success {
         color: green;
       }
     }
