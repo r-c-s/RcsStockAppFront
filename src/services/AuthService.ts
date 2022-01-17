@@ -36,7 +36,7 @@ export default class AuthService {
         credentials: 'include' as RequestCredentials
     };
 
-    return fetch(this.url + '/register', requestOptions);
+    return fetch(this.url + '/register', requestOptions);                                                                                                                                     
   }
 
   public async authenticate() {

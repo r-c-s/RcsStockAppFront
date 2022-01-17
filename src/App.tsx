@@ -57,7 +57,7 @@ function App(props: Props) {
     }
 
     { 
-      isLoggedIn && userInfo && 
+      isLoggedIn && 
       <>
         <PopularStocks 
           myStocks={userInfo.stocks}
