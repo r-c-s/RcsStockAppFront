@@ -1,8 +1,9 @@
+import { UserStocks } from "../services/StockService";
+
 export interface State {
   userInfo: UserInfo;
 }
 
-export interface UserInfo {
-  username: string;
-  stocks: string[];
+export interface UserInfo extends UserStocks {
+  // more stuff can be added here
 }
