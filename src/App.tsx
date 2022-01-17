@@ -40,8 +40,7 @@ function App(props: Props) {
         if (response.ok) {
           storeManager.setUserInfo(await stockService.getMyStocks());
         }
-      })
-      .catch(console.log);
+      });
   }, []);
 
   const isLoggedIn = !!userInfo;
