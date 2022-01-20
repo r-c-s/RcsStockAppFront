@@ -45,6 +45,7 @@ function App(props: Props) {
 
   const isLoggedIn = !!userInfo;
 
+  console.log(servicesConfig);
   return <div id="stock-app">
     <Nav userInfo={userInfo} authService={authService} storeManager={storeManager}/>
       
